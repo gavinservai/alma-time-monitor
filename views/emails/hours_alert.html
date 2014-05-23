@@ -1,0 +1,19 @@
+<table width="100%">
+    <tr bgcolor="#ed4d52">
+        <td style="padding: 20px;"><img src="http://invokelabs.com/assets/img/invokeLabs-logo.png" height="18px" width="90px"></td>
+    </tr>
+</table><br/><br/>
+Hey {{ user.firstname }}! <br /><br />
+
+Looks like there {% if user.hourflag %}are{% else %}is{% endif %} <span style="color:red; font-weight:bold;">{{ hours_missing }} hour{% if user.hourflag %}s{% endif %} </span> missing from the time you should have logged on <a href="{{user.togglURL}}">Toggl last week</a>. <br /> <br />
+
+You logged a total of <b>{{ hours_worked }} hour{% if user.hourflag %}s{% endif %}</b>.
+
+Quick reminder that you should log a minimum of <b>{{ minimum_hours_for_range }}</b> hours this week. <a href="https://sites.google.com/a/invokelabs.com/handbook/getting-yourself-plugged-in-at-invoke-labs/time-tracking">Check the company handbook</a> for more details. <br /><br />
+
+Please ensure you log the missing hour{% if user.hourflag %}s{% endif %} ASAP. If you think there has been a mistake, or it seems like you shouldn't be getting this email DO NOT IGNORE IT.
+<br/>
+Ask your line manager or <a href="mailto:vincent.cauwet@invokelabs.com">Vince</a> about it. <br /><br />
+<a href="{{user.togglURL}}">Click Here</a> to view your hours report on Toggl. <br/><br/>
+
+Thanks!

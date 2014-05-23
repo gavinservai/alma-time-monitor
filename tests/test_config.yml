@@ -1,0 +1,33 @@
+work_days:
+    - 1 # Monday
+    - 2 # Tuesday
+    - 3 # Wednesday
+    - 4 # Thursday
+    - 5 # Friday
+smtp:
+    host: 'a'
+    port: '1'
+    username: 'a'
+    password: 'a'
+
+date_restrict:
+    to_restrict: False
+    weekday: 0
+    hour: 17
+
+sendmail:
+    to_send: False
+
+togglAPI:
+    token: 'a'
+    user_agent: 'a'
+    workspace_id: 1
+
+admin:
+    email: 'a'
+    email2: 'a'
+
+staff:
+    email_role_staff_resource: 'a'
+    email_role_group_leads: 'a'
+    from_email: 'a'

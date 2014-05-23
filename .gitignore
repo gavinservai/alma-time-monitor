@@ -1,0 +1,7 @@
+*.pyc
+.DS_STORE
+.idea
+tests_live_config.json
+config/*
+!config/config_sample.yml
+!config/insert_heroku_configs.sh

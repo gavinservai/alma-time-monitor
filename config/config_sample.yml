@@ -1,0 +1,42 @@
+# The days counted as working days
+work_days:
+    - 1 # Monday
+    - 2 # Tuesday
+    - 3 # Wednesday
+    - 4 # Thursday
+    - 5 # Friday
+
+# The SMTP details for your mail provider
+smtp:
+    host: 'smtp.yourhost.com'
+    port: '1234'
+    username: 'your_username'
+    password: 'your_password'
+
+# The Day and Hour of the week that the script is restricted to
+date_restrict:
+    # True = restrict. False = don't restrict (manual mode)
+    to_restrict: False
+    weekday: 0
+    hour: 0
+
+# Whether or not the script should send out emails. Set to False to disable mailing
+sendmail:
+    to_send: False
+
+# Your Toggl Api Credentials
+togglAPI:
+    token: 'your_token'
+    user_agent: 'your_user_agent'
+    workspace_id: 12345
+
+# The email addresses of admins who should not be included in the report. You can add any amount of addresses to this list
+admin:
+    - some_admin_user@somehost.com
+    - another_admin_user@somehost.com
+
+# The email addresses of staff
+staff:
+    email_role_staff_resource: 'person_who_receives_summary_reports@somehost.com'
+    email_role_group_leads: 'person_who_gets_cc_of_missing_hour_reports@somehost.com'
+    from_email: 'sender_address@somehost.com'

@@ -1,0 +1,32 @@
+<table width="100%">
+    <tr bgcolor="#ed4d52">
+        <td style="padding: 20px;"><img src="http://invokelabs.com/assets/img/invokeLabs-logo.png" height="18px" width="90px"></td>
+    </tr>
+</table><br/><br/>
+Hello!<br/>
+See below for the summary of the teams hours for <a href="https://www.toggl.com/app/#reports/detailed/375350/period/prevWeek/billable/both">last week on Toggl</a>. <br /><br />
+
+<div>Week: <b>{{ start_month }} {{start_dayMonth}} ({{start_dayWeek}}) till {{ end_month }} {{ end_dayMonth }} ({{end_dayWeek}})</b></div>
+<div>Minimum Hours: <b>{{ minimum_hours_for_range }}</b></div> <br/><br/>
+
+Please verify all hours entered by your team are correct (e.g. hours without project, billable VS non-billable, days missing, etc). <a href="https://sites.google.com/a/invokelabs.com/handbook/getting-yourself-plugged-in-at-invoke-labs/time-tracking">Check the company handbook</a> for more details.
+<br/><br/>
+
+<center>
+<table >
+    <tr bgcolor="#DDDDDD" style="background-color:#DDDDDD;">
+        <th style="color:#555555; border: 1px solid #a5a5a5; padding:8px;">Name</th>
+        <th style="color:#555555; border: 1px solid #a5a5a5; padding:8px;">Logged (hours)</th>
+        <th style="color:#555555; border: 1px solid #a5a5a5; padding:8px;">Missing (hours)</th>
+        <th style="color:#555555; border: 1px solid #a5a5a5; padding:8px;">Percent Worked (%)</th>
+    </tr>
+    {% for name, hours_float, hours, percent, missing_hours, togglURL in users_list %}
+    <tr {% if missing_hours != '0.00' %}bgcolor = "#EB4348" style = "background-color:#EB4348;"{% elif loop.index % 2 == 1 %}bgcolor = "#f2f2f2" style = "background-color:#f2f2f2;" {% else %} bgcolor = "white" style = "background-color:white;" {% endif %} >
+        <td style="border: 1px solid #a5a5a5; vertical-align: middle; padding: 8px;"><a href="{{togglURL}}">{{ name }}</a></td>
+        <td style="border: 1px solid #a5a5a5; text-align: center; vertical-align: middle; padding: 8px;">{{ hours }}</td>
+        <td style="font-weight:bold; border: 1px solid #a5a5a5; text-align: center; vertical-align: middle; padding: 8px;">{{ missing_hours }}</td>
+        <td style="border: 1px solid #a5a5a5; text-align: center; vertical-align: middle; padding: 8px;">{{ percent }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</center>

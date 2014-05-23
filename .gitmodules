@@ -1,0 +1,3 @@
+[submodule "toggle_client_api"]
+	path = toggle_client_api
+	url = https://github.com/invokelabs/toggl-python-api-client.git
