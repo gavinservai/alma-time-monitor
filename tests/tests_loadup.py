@@ -96,8 +96,7 @@ class LoadupTests(unittest.TestCase):
         os.environ['TOGGL_WORKSPACE_ID'] = 'b'
 
 
-        os.environ['ADMIN_EMAIL_1'] = 'b'
-        os.environ['ADMIN_EMAIL_2'] = 'b'
+        os.environ['ADMIN_EMAIL'] = '["b"]'
 
         os.environ['STAFF_EMAIL_ROLE_STAFF_RESOURCE'] = 'b'
         os.environ['STAFF_EMAIL_ROLE_GROUP_LEADS'] = 'b'
@@ -133,8 +132,8 @@ class LoadupTests(unittest.TestCase):
         os.environ['TOGGL_WORKSPACE_ID'] = 'b'
 
 
-        os.environ['ADMIN_EMAIL_1'] = 'b'
-        os.environ['ADMIN_EMAIL_2'] = 'b'
+        os.environ['ADMIN_EMAIL'] = '["b"]'
+
 
         os.environ['STAFF_EMAIL_ROLE_STAFF_RESOURCE'] = 'b'
         os.environ['STAFF_EMAIL_ROLE_GROUP_LEADS'] = 'b'
@@ -172,8 +171,8 @@ class LoadupTests(unittest.TestCase):
         os.environ['TOGGL_WORKSPACE_ID'] = 'b'
 
 
-        os.environ['ADMIN_EMAIL_1'] = 'b'
-        os.environ['ADMIN_EMAIL_2'] = 'b'
+        os.environ['ADMIN_EMAIL'] = '["b"]'
+
 
         os.environ['STAFF_EMAIL_ROLE_STAFF_RESOURCE'] = 'b'
         os.environ['STAFF_EMAIL_ROLE_GROUP_LEADS'] = 'b'
@@ -208,8 +207,8 @@ class LoadupTests(unittest.TestCase):
         os.environ['TOGGL_WORKSPACE_ID'] = 'b'
 
 
-        os.environ['ADMIN_EMAIL_1'] = 'b'
-        os.environ['ADMIN_EMAIL_2'] = 'b'
+        os.environ['ADMIN_EMAIL'] = '["b"]'
+
 
         os.environ['STAFF_EMAIL_ROLE_STAFF_RESOURCE'] = 'b'
         os.environ['STAFF_EMAIL_ROLE_GROUP_LEADS'] = 'b'
